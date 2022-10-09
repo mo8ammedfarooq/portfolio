@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farooq's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d77e3d38f1.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="./images/logo.png" alt="logo" class="logo"> -->
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Science Undergrad!</p>
+                 <h1>Hi, I'm <span>Mohd.Farooq</span><br> from Hyderabad, India.</h1>
+                 <p>A computer science student passionate about programming and design.</p>
+            </div>
+        </div>
+    </div>
+    <!-- About  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me!</h1>
+                    <div class="matter">
+                        <p>I am pursuing  B.Tech in Computer Science from Lovely   professional University, Punjab(India).
+                            Goal oriented focused pre-final year student who is a passionate coder and loves to solve problems using data structures and algorithms.
+                            <p>Apart from, studies :)</p>
+                            I like to travel. I believe travelling gives you a new perspective to everything. You get to know a lot about the different cultures, the cuisines, their history, the language and all the small unique things every place has to offer.</p>
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <!-- <p class="tab-links">Skills</p> -->
+                    </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages:</span><br>C,C++,Java</li>
+                        <li><span>Web Development</span><br>HTML,CSS,Java Script</li>
+                        <li><span>Core Subjects:</span><br>Computer Networks,Operating systems, OOPS(C++),Data Structres, Algorithms</li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - current</span><br> Lovely professional University.<br> 7.9 CGPA(4/8)semester</li>
+                        <li><span>2017 - 2019</span><br> Sri chaitnaya junior college,Narayanguda,Hyderabad<br>
+                        90%</li>
+                        <li><span>2014 - 2017</span><br> Madina Public School<br>9.2CGPA</li>
+                    </ul>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- ------------------ Contact Section ----------------- -->
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+       <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>farooqmohdplacement@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+91 9010678238</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mo7ammedfarooq/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mohammed-farooq-095b581b6/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-quora"></i></a>
+            </div>
+            <a href="./images/resume.pdf" download class="btn">Download resume</a>
+       </div>
+       <div class="contact-right">
+          <form action="">
+            <input type="text" name="Name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn2">Submit</button>
+          </form>
+       </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ------------------ Copyright----------------->
+
+  <div class="copyright">
+    <p><i class="fa-regular fa-copyright"></i> Copyright 2022 Mohammed Farooq. Made with ❤️‍🔥</p>
+  </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+             for(tablink of tablinks)
+             {
+                tablink.classList.remove("active-link");
+             }
+
+             for(tabcontent of tabcontents)
+             {
+                tabcontent.classList.remove("active-tab");
+             }
+
+             event.currentTarget.classList.add("active-link");
+             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
